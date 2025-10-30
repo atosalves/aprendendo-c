@@ -16,31 +16,37 @@
         Se o valor não atender a nenhuma das condições acima, escrever "Horário inválido"
 */
 
-int main() {
-
-        int hora = 0;
-        printf("Que horas sao?\n");
-        scanf("%d", &hora);
-
+void saudar(int hora)
+{
         if(hora >= 0 && hora < 12)
         {
                 printf("Bom dia\n");
         }
         
-        if(hora >= 12 && hora < 18)
+        else if(hora >= 12 && hora < 18)
         {
                 printf("Boa tarde\n");
         }
         
-        if(hora >= 18 && hora <= 23)
+        else if(hora >= 18 && hora <= 23)
         {
                 printf("Boa noite\n");
         }
 
-        if(hora > 23 || hora < 0)
+        else
         {
                 printf("Horario invalido\n");
         }
+}
+
+int main()
+{
+
+        int hora = 0;
+        printf("Que horas sao?\n");
+        scanf("%d", &hora);
+
+        saudar(hora);
 
         system("pause"); // para não fechar o executavel
 
